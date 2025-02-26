@@ -1,15 +1,22 @@
-// import React from "react";
+import { useState } from "react";
 import {
   Plane as Plant,
   Home,
   Info,
   User,
   LayoutDashboard,
+  Menu,
+  X
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const isActive = (path: string) => {
     return location.pathname === path
@@ -25,6 +32,8 @@ export default function Navbar() {
             <Plant className="h-6 w-6" />
             <span className="text-xl font-semibold">Ayurcure</span>
           </Link>
+          
+          {/* Desktop menu */}
           <div className="hidden md:flex space-x-8">
             <Link
               to="/"
@@ -57,8 +66,68 @@ export default function Navbar() {
               <span>Sign In</span>
             </Link>
           </div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="p-2 focus:outline-none focus:ring-2 focus:ring-green-500 rounded-md"
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
+        
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="flex flex-col space-y-3 pb-4 pt-2 border-t border-green-700">
+              <Link
+                to="/"
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md ${isActive("/")}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Home className="h-5 w-5" />
+                <span>Home</span>
+              </Link>
+              <Link
+                to="/about"
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md ${isActive("/about")}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Info className="h-5 w-5" />
+                <span>About</span>
+              </Link>
+              <Link
+                to="/dashboard"
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md ${isActive(
+                  "/dashboard"
+                )}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <LayoutDashboard className="h-5 w-5" />
+                <span>Dashboard</span>
+              </Link>
+              <Link
+                to="/signin"
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md ${isActive("/signin")}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <User className="h-5 w-5" />
+                <span>Sign In</span>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
 }
+
+
