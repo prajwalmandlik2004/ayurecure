@@ -59,6 +59,13 @@ export default function Navbar() {
               <span>Dashboard</span>
             </Link>
             <Link
+              to="/search"
+              className={`flex items-center space-x-1 ${isActive("/search")}`}
+            >
+              <LayoutDashboard className="h-4 w-4" />
+              <span>Illness</span>
+            </Link>
+            <Link
               to="/signin"
               className={`flex items-center space-x-1 ${isActive("/signin")}`}
             >
@@ -67,7 +74,9 @@ export default function Navbar() {
             </Link>
             <Link
               to="/thank-you"
-              className={`flex items-center space-x-1 ${isActive("/signin")}`}
+              className={`flex items-center space-x-1 ${isActive(
+                "/thank-you"
+              )}`}
             >
               <User className="h-4 w-4" />
               <span>Thank You</span>
@@ -124,6 +133,16 @@ export default function Navbar() {
               >
                 <LayoutDashboard className="h-5 w-5" />
                 <span>Dashboard</span>
+              </Link>
+              <Link
+                to="/search"
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md ${isActive(
+                  "/search"
+                )}`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <LayoutDashboard className="h-5 w-5" />
+                <span>Illness</span>
               </Link>
               <Link
                 to="/signin"
