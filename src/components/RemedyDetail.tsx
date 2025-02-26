@@ -2,61 +2,21 @@
 import { useParams } from 'react-router-dom';
 
 const remedies = {
-  'Soothe Sore Throat': {
+  'sore-throat': {
     title: 'Soothe Sore Throat',
-    image: 'https://example.com/sore-throat.jpg',
+    image: 'https://images.unsplash.com/photo-1596095627402-89823caa7cd4?auto=format&fit=crop&q=80',
     ingredients: ['Turmeric', 'Honey', 'Ginger'],
     frequency: '3 times a day',
     description: 'A natural remedy combining the anti-inflammatory properties of turmeric and ginger with honey\'s soothing effects.',
     instructions: 'Mix 1 tsp turmeric and grated ginger in warm water, add honey. Gargle and sip slowly.'
   },
-  'Fever': {
+  'fever': {
     title: 'Natural Fever Relief',
-    image: 'https://example.com/fever.jpg',
+    image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f6?auto=format&fit=crop&q=80',
     ingredients: ['Holy Basil', 'Ginger', 'Honey'],
     frequency: 'Every 4 hours',
     description: 'A traditional Ayurvedic remedy to help reduce fever and boost immunity.',
     instructions: 'Boil holy basil leaves and ginger in water, strain, add honey. Drink warm.'
-  },
-  'Cough': {
-    title: 'Cough Relief',
-    image: 'https://example.com/cough.jpg',
-    ingredients: ['Honey', 'Lemon', 'Ginger'],
-    frequency: 'As needed',
-    description: 'A soothing remedy for cough and throat irritation.',
-    instructions: 'Mix honey and lemon juice in warm water. Drink as needed.'
-  },
-  'Cold': {
-    title: 'Cold Relief',
-    image: 'https://example.com/cold.jpg',
-    ingredients: ['Ginger', 'Honey', 'Lemon'],
-    frequency: 'As needed',
-    description: 'Helps alleviate cold symptoms and promotes recovery.',
-    instructions: 'Prepare ginger tea with honey and lemon. Drink warm.'
-  },
-  'Acidity': {
-    title: 'Acidity Relief',
-    image: 'https://example.com/acidity.jpg',
-    ingredients: ['Baking Soda', 'Water'],
-    frequency: 'As needed',
-    description: 'Neutralizes stomach acid and relieves discomfort.',
-    instructions: 'Mix 1/2 tsp baking soda in a glass of water. Drink slowly.'
-  },
-  'Indigestion': {
-    title: 'Indigestion Relief',
-    image: 'https://example.com/indigestion.jpg',
-    ingredients: ['Peppermint', 'Ginger'],
-    frequency: 'As needed',
-    description: 'Aids digestion and reduces bloating.',
-    instructions: 'Drink peppermint tea or chew ginger slices.'
-  },
-  'Body Pain': {
-    title: 'Body Pain Relief',
-    image: 'https://example.com/body-pain.jpg',
-    ingredients: ['Turmeric', 'Ginger'],
-    frequency: 'Every 6-8 hours',
-    description: 'Relieves pain and discomfort in the body.',
-    instructions: 'Prepare a turmeric and ginger tea. Drink warm.'
   }
   // Add more remedies as needed
 };
