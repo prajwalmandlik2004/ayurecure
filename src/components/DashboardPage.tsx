@@ -10,8 +10,7 @@ const ingredients = [
   },
   {
     name: "Holy Basil (Tulsi)",
-    image:
-      "https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&q=80",
+    image: "https://i.ibb.co/jvGVgtm5/tulsi.jpg",
     benefits: ["Stress relief", "Respiratory health", "Immunity support"],
   },
   {

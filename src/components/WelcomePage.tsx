@@ -39,7 +39,7 @@ export default function WelcomePage() {
         className="relative h-[600px] bg-cover bg-center"
         style={{
           backgroundImage:
-            'url("https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80")',
+            'url("https://media.istockphoto.com/id/855014602/photo/turmeric-powder-turmeric-in-mortar-grinder-drugs-and-ingredient-herbs-on-wooden-background.jpg?s=612x612&w=0&k=20&c=LOJOCwVBgl96mq7bx6FoCIN3WHO4N1QoBgYWX-7ZlFE=")',
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50" />
@@ -175,5 +175,3 @@ export default function WelcomePage() {
     </div>
   );
 }
-
-
